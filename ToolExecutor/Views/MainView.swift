@@ -127,6 +127,9 @@ struct MainView: View {
                                     onExecute: {
                                         commandExecutor.executeCommand(command)
                                     },
+                                    onExecuteInTerminal: {
+                                        commandExecutor.executeCommandInTerminal(command)
+                                    },
                                     onEdit: {
                                         editingCommand = command
                                     },
@@ -177,6 +180,7 @@ struct MainView: View {
 struct CommandCard: View {
     let command: CommandModel
     let onExecute: () -> Void
+    let onExecuteInTerminal: () -> Void
     let onEdit: () -> Void
     let onDelete: () -> Void
     let onToggle: () -> Void
@@ -215,54 +219,79 @@ struct CommandCard: View {
             Divider()
                 .opacity(0.5)
             
-            HStack {
-                Button(action: {
-                    if command.isEnabled {
-                        onExecute()
+            VStack(spacing: 12) {
+                // 第一行：背景執行和終端執行按鈕
+                HStack {
+                    Button(action: {
+                        if command.isEnabled {
+                            onExecute()
+                        }
+                    }) {
+                        HStack {
+                            Image(systemName: "play.fill")
+                                .font(.system(size: 12))
+                            Text("背景執行")
+                                .font(.system(size: 14, weight: .medium))
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                     }
-                }) {
-                    HStack {
-                        Image(systemName: "play.fill")
-                            .font(.system(size: 12))
-                        Text("執行")
-                            .font(.system(size: 14, weight: .medium))
+                    .buttonStyle(.borderedProminent)
+                    .disabled(!command.isEnabled)
+                    
+                    Button(action: {
+                        if command.isEnabled {
+                            onExecuteInTerminal()
+                        }
+                    }) {
+                        HStack {
+                            Image(systemName: "terminal")
+                                .font(.system(size: 12))
+                            Text("終端執行")
+                                .font(.system(size: 14, weight: .medium))
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .buttonStyle(.bordered)
+                    .disabled(!command.isEnabled)
+                    
+                    Spacer()
                 }
-                .buttonStyle(.borderedProminent)
-                .disabled(!command.isEnabled)
                 
-                Button(action: onEdit) {
-                    HStack {
-                        Image(systemName: "pencil")
-                            .font(.system(size: 12))
-                        Text("編輯")
-                            .font(.system(size: 14, weight: .medium))
+                // 第二行：編輯、刪除和創建時間
+                HStack {
+                    Button(action: onEdit) {
+                        HStack {
+                            Image(systemName: "pencil")
+                                .font(.system(size: 12))
+                            Text("編輯")
+                                .font(.system(size: 14, weight: .medium))
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                }
-                .buttonStyle(.bordered)
-                
-                Button(action: onDelete) {
-                    HStack {
-                        Image(systemName: "trash")
-                            .font(.system(size: 12))
-                        Text("刪除")
-                            .font(.system(size: 14, weight: .medium))
+                    .buttonStyle(.bordered)
+                    
+                    Button(action: onDelete) {
+                        HStack {
+                            Image(systemName: "trash")
+                                .font(.system(size: 12))
+                            Text("刪除")
+                                .font(.system(size: 14, weight: .medium))
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.red)
+                    
+                    Spacer()
+                    
+                    Text(command.createdAt, style: .date)
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
                 }
-                .buttonStyle(.bordered)
-                .foregroundColor(.red)
-                
-                Spacer()
-                
-                Text(command.createdAt, style: .date)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
             }
         }
         .padding(20)

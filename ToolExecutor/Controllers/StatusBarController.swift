@@ -48,14 +48,33 @@ class StatusBarController: NSObject, ObservableObject {
             menu.addItem(noCommandsItem)
         } else {
             for command in enabledCommands {
-                let menuItem = NSMenuItem(
-                    title: command.name,
-                    action: #selector(executeCommand(_:)),
+                let mainItem = NSMenuItem(title: command.name, action: nil, keyEquivalent: "")
+                
+                // 創建子菜單
+                let submenu = NSMenu()
+                
+                // 背景執行選項
+                let backgroundItem = NSMenuItem(
+                    title: "背景執行",
+                    action: #selector(executeCommandInBackground(_:)),
                     keyEquivalent: ""
                 )
-                menuItem.target = self
-                menuItem.representedObject = command
-                menu.addItem(menuItem)
+                backgroundItem.target = self
+                backgroundItem.representedObject = command
+                submenu.addItem(backgroundItem)
+                
+                // 終端執行選項
+                let terminalItem = NSMenuItem(
+                    title: "在終端執行",
+                    action: #selector(executeCommandInTerminal(_:)),
+                    keyEquivalent: ""
+                )
+                terminalItem.target = self
+                terminalItem.representedObject = command
+                submenu.addItem(terminalItem)
+                
+                mainItem.submenu = submenu
+                menu.addItem(mainItem)
             }
         }
         
@@ -72,6 +91,16 @@ class StatusBarController: NSObject, ObservableObject {
         menu.addItem(quitItem)
         
         statusItem?.menu = menu
+    }
+    
+    @objc private func executeCommandInBackground(_ sender: NSMenuItem) {
+        guard let command = sender.representedObject as? CommandModel else { return }
+        commandExecutor.executeCommand(command)
+    }
+    
+    @objc private func executeCommandInTerminal(_ sender: NSMenuItem) {
+        guard let command = sender.representedObject as? CommandModel else { return }
+        commandExecutor.executeCommandInTerminal(command)
     }
     
     @objc private func executeCommand(_ sender: NSMenuItem) {

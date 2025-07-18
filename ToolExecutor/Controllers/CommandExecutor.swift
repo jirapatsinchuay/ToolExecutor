@@ -15,6 +15,37 @@ class CommandExecutor: ObservableObject {
         }
     }
     
+    // 新增：在終端中執行命令
+    func executeCommandInTerminal(_ command: CommandModel) {
+        guard command.isEnabled else { return }
+        
+        let appleScript = """
+        tell application "Terminal"
+            activate
+            do script "\(command.command.escapingAppleScriptString())"
+        end tell
+        """
+        
+        let task = Process()
+        task.launchPath = "/usr/bin/osascript"
+        task.arguments = ["-e", appleScript]
+        
+        do {
+            try task.run()
+            showNotification(
+                title: "命令已發送到終端",
+                message: "「\(command.name)」已在終端中執行",
+                isError: false
+            )
+        } catch {
+            showNotification(
+                title: "無法開啟終端",
+                message: "發送命令「\(command.name)」到終端失敗: \(error.localizedDescription)",
+                isError: true
+            )
+        }
+    }
+    
     func executeCommand(_ command: CommandModel) {
         guard command.isEnabled else { return }
         
@@ -101,5 +132,14 @@ class CommandExecutor: ObservableObject {
                 print("通知發送失敗: \(error)")
             }
         }
+    }
+}
+
+// 擴展 String 來處理 AppleScript 字符串轉義
+extension String {
+    func escapingAppleScriptString() -> String {
+        return self
+            .replacingOccurrences(of: "\\", with: "\\\\")
+            .replacingOccurrences(of: "\"", with: "\\\"")
     }
 }
