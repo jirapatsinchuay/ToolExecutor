@@ -20,6 +20,11 @@ struct MainView: View {
         }
     }
     
+    private func closeMainWindow() {
+        // 通過 AppDelegate 關閉主視窗
+        AppDelegate.shared.closeMainWindow()
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
                 // Header
@@ -173,6 +178,10 @@ struct MainView: View {
             }
         } message: {
             Text("確定要刪除命令「\(commandToDelete?.name ?? "")」嗎？")
+        }
+        .onKeyPress(.escape) {
+            closeMainWindow()
+            return .handled
         }
     }
 }
