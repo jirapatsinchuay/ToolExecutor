@@ -6,5 +6,15 @@
     <true/>
     <key>com.apple.security.files.user-selected.read-only</key>
     <true/>
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
+    <key>com.apple.security.files.downloads.read-write</key>
+    <true/>
+    <key>com.apple.security.temporary-exception.shell-task</key>
+    <string>bash</string>
+    <key>com.apple.security.temporary-exception.shell-task.access</key>
+    <string>read-write</string>
+    <key>com.apple.security.inherit</key>
+    <true/>
 </dict>
 </plist>
