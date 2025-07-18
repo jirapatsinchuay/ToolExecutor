@@ -6,7 +6,7 @@
 
 ## 📥 下载
 
-[⬇️ 下载 ToolExecutor v1.0.2 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.2/ToolExecutor-v1.0.2-ESC.dmg)
+[⬇️ 下载 ToolExecutor v1.0.3 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.3/ToolExecutor-v1.0.3-Fixed.dmg)
 
 ## ✨ 主要功能
 
@@ -36,7 +36,7 @@
 ## 📱 使用方式
 
 ### 安裝
-1. 下載 `ToolExecutor-v1.0.2-ESC.dmg` 文件
+1. 下載 `ToolExecutor-v1.0.3-Fixed.dmg` 文件
 2. 雙擊打開 DMG 文件
 3. 將 ToolExecutor.app 拖拽到 Applications 文件夾
 4. 首次啟動時右鍵點擊選擇「打開」
@@ -98,6 +98,13 @@
 - 支援鍵盤快捷鍵
 
 ## 📝 更新日誌
+
+### v1.0.3 (2025-07-18)
+- 🔧 修復 ESC 按鍵監聽問題，移到視窗層級處理
+- ⌨️ 現在在任何狀態下按 ESC 鍵都能正確關閉主視圖
+- 🛠️ 包括在新增命令、編輯命令等彈出視窗狀態下也能正常關閉
+- 🎯 使用自定義 EscapeKeyWindow 類別提供更可靠的按鍵處理
+- 📦 提升用戶體驗，確保 ESC 按鍵功能的一致性
 
 ### v1.0.2 (2025-07-18)
 - ⌨️ 新增 ESC 按鍵快速關閉主視圖功能
