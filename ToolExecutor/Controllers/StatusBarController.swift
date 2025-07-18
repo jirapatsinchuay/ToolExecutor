@@ -109,11 +109,8 @@ class StatusBarController: NSObject, ObservableObject {
     }
     
     @objc private func showMainView() {
-        // 顯示主視圖
-        if let window = NSApplication.shared.windows.first {
-            window.makeKeyAndOrderFront(nil)
-            NSApp.activate(ignoringOtherApps: true)
-        }
+        // 通過 AppDelegate 顯示主視圖
+        AppDelegate.shared.showMainWindow()
     }
     
     @objc private func quit() {

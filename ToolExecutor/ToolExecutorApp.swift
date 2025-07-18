@@ -20,6 +20,9 @@ struct ToolExecutorApp: App {
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
         .defaultSize(width: 800, height: 600)
+        .commands {
+            CommandGroup(replacing: .newItem) { }
+        }
         
         Settings {
             EmptyView()

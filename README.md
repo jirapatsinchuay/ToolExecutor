@@ -2,11 +2,11 @@
 
 一個優雅的 macOS 命令執行工具，支援雙重執行模式，讓命令行工具的使用變得更加簡單高效！
 
-![ToolExecutor](Gemini_Generated_Image_obnavvobnavvobna.png)
+![ToolExecutor](icon.png)
 
 ## 📥 下载
 
-[⬇️ 下载 ToolExecutor v1.0.0 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.0/ToolExecutor-v1.0.0-Clean.dmg)
+[⬇️ 下载 ToolExecutor v1.0.1 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.1/ToolExecutor-v1.0.1-Final.dmg)
 
 ## ✨ 主要功能
 
@@ -21,9 +21,10 @@
 - 一鍵啟用/停用命令
 
 ### ⚡ 便捷的狀態欄操作
-- 系統狀態欄快速存取
+- 系統狀態欄快速存取，不佔用 Dock 空間
 - 每個命令都提供背景執行和終端執行選項
 - 支援子菜單操作
+- 狀態欄專用應用，主視圖按需顯示
 
 ### 🔧 豐富的預設命令
 - 開啟終端機
@@ -35,7 +36,7 @@
 ## 📱 使用方式
 
 ### 安裝
-1. 下載 `ToolExecutor-v1.0.0-Clean.dmg` 文件
+1. 下載 `ToolExecutor-v1.0.1-Final.dmg` 文件
 2. 雙擊打開 DMG 文件
 3. 將 ToolExecutor.app 拖拽到 Applications 文件夾
 4. 首次啟動時右鍵點擊選擇「打開」
@@ -54,6 +55,7 @@
 3. 在子菜單中選擇執行方式：
    - **背景執行**：直接在後台運行
    - **在終端執行**：在 Terminal.app 中打開執行
+4. 點擊「顯示主視圖」可打開完整的管理界面
 
 ## 🔧 系統需求
 
@@ -95,6 +97,13 @@
 - 支援鍵盤快捷鍵
 
 ## 📝 更新日誌
+
+### v1.0.1 (2025-07-18)
+- 🎨 更新應用程式圖標，更加美觀統一
+- 🔧 改進為狀態欄專用應用，不佔用 Dock 空間
+- 📦 重新設計 DMG 安裝包，提供拖拽安裝體驗
+- 🛠️ 優化主視圖顯示/隱藏機制
+- 📝 更新項目文檔和開發指南
 
 ### v1.0.0 (2025-07-18)
 - 🎉 首次發布

@@ -21,6 +21,9 @@ Package.resolved
 
 # DMG build files
 dmg-temp/
+dmg_temp/
+dmg_template/
+temp_icons/
 *.dmg
 
 # IDE
@@ -56,5 +59,6 @@ Icon?
 Network Trash Folder
 Temporary Items
 .apdisk
-.gitignore
-RELEASE_GUIDE.md
+# Build artifacts
+ToolExecutor.app
+temp_dmg.dmg
