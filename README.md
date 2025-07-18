@@ -6,7 +6,7 @@
 
 ## 📥 下载
 
-[⬇️ 下载 ToolExecutor v1.0.1 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.1/ToolExecutor-v1.0.1-Final.dmg)
+[⬇️ 下载 ToolExecutor v1.0.2 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.2/ToolExecutor-v1.0.2-ESC.dmg)
 
 ## ✨ 主要功能
 
@@ -36,7 +36,7 @@
 ## 📱 使用方式
 
 ### 安裝
-1. 下載 `ToolExecutor-v1.0.1-Final.dmg` 文件
+1. 下載 `ToolExecutor-v1.0.2-ESC.dmg` 文件
 2. 雙擊打開 DMG 文件
 3. 將 ToolExecutor.app 拖拽到 Applications 文件夾
 4. 首次啟動時右鍵點擊選擇「打開」
@@ -56,6 +56,7 @@
    - **背景執行**：直接在後台運行
    - **在終端執行**：在 Terminal.app 中打開執行
 4. 點擊「顯示主視圖」可打開完整的管理界面
+5. **快速關閉**：在主視圖中按下 ESC 鍵可快速關閉視窗
 
 ## 🔧 系統需求
 
@@ -97,6 +98,13 @@
 - 支援鍵盤快捷鍵
 
 ## 📝 更新日誌
+
+### v1.0.2 (2025-07-18)
+- ⌨️ 新增 ESC 按鍵快速關閉主視圖功能
+- 🔧 修復「顯示主視圖」功能，確保視窗正確創建和顯示
+- 🛠️ 改進視窗生命週期管理，支援視窗重複使用
+- 🎯 提升用戶體驗，支援鍵盤快捷鍵操作
+- 📦 更新 DMG 安裝包為 v1.0.2 版本
 
 ### v1.0.1 (2025-07-18)
 - 🎨 更新應用程式圖標，更加美觀統一

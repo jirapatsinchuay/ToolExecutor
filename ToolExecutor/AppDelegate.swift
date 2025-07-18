@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject, NSWindowDe
             .environmentObject(commandExecutor)
         
         // 創建視窗
-        let window = NSWindow(
+        let window = EscapeKeyWindow(
             contentRect: NSRect(x: 0, y: 0, width: 800, height: 600),
             styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered,
@@ -63,6 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject, NSWindowDe
         window.title = "ToolExecutor"
         window.contentView = NSHostingView(rootView: mainView)
         window.delegate = self
+        window.appDelegate = self
         window.center()
         window.makeKeyAndOrderFront(nil)
         
@@ -106,5 +107,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject, NSWindowDe
     
     func applicationWillTerminate(_ notification: Notification) {
         statusBarController = nil
+    }
+}
+
+// 自定義視窗類別，用於處理 ESC 按鍵
+class EscapeKeyWindow: NSWindow {
+    weak var appDelegate: AppDelegate?
+    
+    override func keyDown(with event: NSEvent) {
+        if event.keyCode == 53 { // ESC 鍵的鍵碼
+            // 關閉主視窗
+            appDelegate?.closeMainWindow()
+        } else {
+            super.keyDown(with: event)
+        }
     }
 }
