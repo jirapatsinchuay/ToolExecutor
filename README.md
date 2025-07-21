@@ -6,7 +6,7 @@
 
 ## 📥 下载
 
-[⬇️ 下载 ToolExecutor v1.0.3 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.3/ToolExecutor-v1.0.3-Fixed.dmg)
+[⬇️ 下载 ToolExecutor v1.0.4 (DMG)](https://github.com/panhyer36/ToolExecutor/releases/download/v1.0.4/ToolExecutor-v1.0.4.dmg)
 
 ## ✨ 主要功能
 
@@ -36,7 +36,7 @@
 ## 📱 使用方式
 
 ### 安裝
-1. 下載 `ToolExecutor-v1.0.3-Fixed.dmg` 文件
+1. 下載 `ToolExecutor-v1.0.4.dmg` 文件
 2. 雙擊打開 DMG 文件
 3. 將 ToolExecutor.app 拖拽到 Applications 文件夾
 4. 首次啟動時右鍵點擊選擇「打開」
@@ -56,7 +56,7 @@
    - **背景執行**：直接在後台運行
    - **在終端執行**：在 Terminal.app 中打開執行
 4. 點擊「顯示主視圖」可打開完整的管理界面
-5. **快速關閉**：在主視圖中按下 ESC 鍵可快速關閉視窗
+5. **便捷關閉**：點擊視窗關閉按鈕或使用快捷鍵關閉視窗
 
 ## 🔧 系統需求
 
@@ -98,6 +98,12 @@
 - 支援鍵盤快捷鍵
 
 ## 📝 更新日誌
+
+### v1.0.4 (2025-07-21)
+- 🗑️ **移除 ESC 按鍵綁定功能**：刪除了 ESC 按鍵快速關閉主視窗的功能，因為實現複雜度較高
+- 🔧 **技術改進**：移除 `EscapeKeyWindow` 自定義類別，改用標準 `NSWindow` 實現
+- 🏗️ **代碼簡化**：優化視窗創建流程，減少代碼複雜度
+- 📦 **穩定性提升**：簡化視窗管理邏輯，提高應用程式穩定性
 
 ### v1.0.3 (2025-07-18)
 - 🔧 修復 ESC 按鍵監聽問題，移到視窗層級處理

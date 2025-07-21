@@ -62,3 +62,5 @@ Temporary Items
 # Build artifacts
 ToolExecutor.app
 temp_dmg.dmg
+CLAUDE.md
+.gitignore
